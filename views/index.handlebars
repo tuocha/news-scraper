@@ -1,11 +1,22 @@
 <nav>
     <div class="nav-wrapper cyan lighten-2">
-        <a href="#" class="brand-logo" id="navTitle">news scraper</a>
+        <a href="#" class="brand-logo" id="nav-title">news scraper</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><button class="btn waves-effect waves-light cyan darken-1" type="submit" name="action">scrape articles
                 </button></li>
-            <li><button class="btn waves-effect waves-light cyan accent-3" type="submit" name="action">clear articles
+            <li><button class="btn waves-effect waves-light cyan accent-3" id="right-button" type="submit"
+                    name="action">clear articles
                 </button></li>
         </ul>
     </div>
 </nav>
+
+<ul class="collection">
+    <li class="collection-item avatar">
+        <img src="/assets/images/news-icon.png" style="height:50px; width:50px">
+        <span class="title"></span><br>
+        <span class="article-body">
+        {{!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> --}}
+    </li>
+</ul>
+<div id="articles"></div>

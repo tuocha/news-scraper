@@ -1,0 +1,24 @@
+body {
+    background-image: url("/public/assets/images/hotel-wallpaper.png")
+}
+#nav-title {
+    margin-left: 10%;
+}
+
+#right-button {
+    margin-right: 600px;
+}
+
+.collection-item {
+    text-align: center;
+    font-size: 24pt;
+    height: 70px;
+}
+
+.slider {
+    margin-top: 1%;
+}
+
+#caption {
+    color: black;
+}

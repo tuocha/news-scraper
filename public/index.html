@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>news scraper</title>
+
+    <!-- {{!-- Materialize CDN --}} -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- {{!-- custom stylsheet link --}} -->
+    <link rel="stylesheet" href="/assets/css/index.css" type="text/css" />
+
+      </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper cyan lighten-2">
+        <a href="#" class="brand-logo" id="nav-title">news scraper</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <button
+              class="btn waves-effect waves-light cyan darken-1"
+              type="submit"
+              name="action"
+            >
+              scrape articles
+            </button>
+          </li>
+          <li>
+            <button
+              class="btn waves-effect waves-light cyan accent-3"
+              id="right-button"
+              type="submit"
+              name="action"
+            >
+              clear articles
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="./assets/images/wood.jpg" />
+          <div class="caption center-align">
+            <h1 id="caption">news scraper</h1>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- <img class="materialboxed" width="100%" src="/assets/images/wood.jpg" /> -->
+
+    <!-- <ul class="collection" id="articles">
+</ul> -->
+    <div class="collection" id="articles"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
