@@ -2,32 +2,38 @@ $(document).ready(function() {
   $(".slider").slider();
 });
 
+let buttonID;
+
 $.getJSON("/articles", function(data) {
     // For each one
     for (var i = 0; i < data.length; i++) {
+      if (data[i].saved === false) {
       $("#articles").append(
-
       "<a href='" + data[i].link + "'" +
       "class='collection-item blue lighten-4 data-id='" 
-      + data[i]._id + "'>" +
-      ">" + 
-      data[i].title + 
-      "<a class='note-button waves-effect waves-light btn blue darken-3 modal-trigger' href='#modal1' data-id='" +
+      + data[i]._id + "'>" + 
+      data[i].title + "</a>" + 
+      // "<a class='note-button waves-effect waves-light btn blue darken-3 modal-trigger' href='#modal1' data-id='" +
+      // data[i]._id + "'>" + 
+      // "add a note</a>"
+      "<a class='save-recipe waves-effect waves-light btn blue darken-3' href=/save/" + 
+      data[i]._id + 
+      " data-id='" +
       data[i]._id + "'>" + 
-      ">add a note</a>"
-      
+      "save this recipe</a>"
+
       );
+      }
   }
   });
 
   $(document).on("click", ".note-button", function() {
   // Save the id from the collection item
-  var thisId = $(this).attr("data-id");
-console.log(thisId)
+  buttonID = $(this).attr("data-id");
   // Now make an ajax call for the Article
   $.ajax({
     method: "GET",
-    url: "/articles/" + thisId
+    url: "/articles/" + buttonID
   })
     // With that done, add the note information to the page
     .then(function(data) {
@@ -37,7 +43,7 @@ console.log(thisId)
       // An input to enter a new title
       $("#notes").append("<p>" + data.note.title + "</p>");
       // A textarea to add a new note body
-      $("#notes").append("<p>" + data.note.body + "/p>");
+      $("#notes").append("<p>" + data.note.body + "</p>");
       // A button to submit a new note, with the id of the article saved to it
       // $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
 
@@ -52,13 +58,14 @@ console.log(thisId)
 });
 
 $("#save-note").on("click", function() {
+  // $(this).attr("data-id", )
   // Grab the id associated with the article from the submit button
-  var thisId = $(this).attr("data-id");
-
+  // var thisId = $(this).attr("data-id");
+console.log("saved!", buttonID)
   // Run a POST request to change the note, using what's entered in the inputs
   $.ajax({
     method: "POST",
-    url: "/articles/" + thisId,
+    url: "/articles/" + buttonID,
     data: {
       // Value taken from title input
       title: $("#note-title").val(),

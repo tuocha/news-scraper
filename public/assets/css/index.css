@@ -6,7 +6,7 @@ body {
 }
 
 #right-button {
-    margin-right: 600px;
+    margin-right: 500px;
 }
 
 .collection-item {
@@ -23,7 +23,7 @@ body {
     color: black;
 }
 
-.note-button {
+.save-recipe {
     margin-left: 45%;
-    margin-bottom: 6%;
+    margin-bottom: 2%;
 }
