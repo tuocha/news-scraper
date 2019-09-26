@@ -22,3 +22,8 @@ body {
 #caption {
     color: black;
 }
+
+.note-button {
+    margin-left: 45%;
+    margin-bottom: 6%;
+}

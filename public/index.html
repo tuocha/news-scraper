@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>news scraper</title>
+    <title>recipe</title>
 
     <!-- {{!-- Materialize CDN --}} -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <!-- {{!-- custom stylsheet link --}} -->
-    <link rel="stylesheet" href="/assets/css/index.css" type="text/css" />
 
-      </head>
+    <!-- {{!-- custom stylsheet link --}} -->
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+  </head>
 
   <body>
     <nav>
       <div class="nav-wrapper cyan lighten-2">
-        <a href="#" class="brand-logo" id="nav-title">news scraper</a>
+        <a href="#" class="brand-logo" id="nav-title">recipe scraper</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
             <button
@@ -27,7 +27,7 @@
               type="submit"
               name="action"
             >
-              scrape articles
+              scrape recipes
             </button>
           </li>
           <li>
@@ -37,7 +37,7 @@
               type="submit"
               name="action"
             >
-              clear articles
+              clear recipes
             </button>
           </li>
         </ul>
@@ -49,22 +49,29 @@
         <li>
           <img src="./assets/images/wood.jpg" />
           <div class="caption center-align">
-            <h1 id="caption">news scraper</h1>
+            <h1 id="caption">recipe scraper</h1>
           </div>
         </li>
       </ul>
     </div>
-    <!-- <img class="materialboxed" width="100%" src="/assets/images/wood.jpg" /> -->
-
-    <!-- <ul class="collection" id="articles">
-</ul> -->
+</ul>
+    <div id="notes"></div>
     <div class="collection" id="articles"></div>
 
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>add a note</h4>
+        <input type="text" id="note-title"></input> 
+        <textarea id="note-body"></textarea>
+      </div>
+      <div class="modal-footer">
+        <a href="" id="save-note" class="modal-close waves-effect waves-green btn-flat">save note</a>
+      </div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
