@@ -13,11 +13,15 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 mongoose.connect("mongodb://localhost/recipeScraper", {
   useNewUrlParser: true
 });
+
+app.get("/", function(req, res) {
+  res.send("/public/index.html")
+})
 
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with axios
