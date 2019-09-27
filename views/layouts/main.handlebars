@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>recipe scraper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <!-- {{!-- custom stylsheet link --}} -->
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper cyan lighten-2">
+            <a href="/" class="brand-logo" id="nav-title">cook!</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a class="btn waves-effect waves-light pink lighten-3" href="/saved">saved</a>
+                </li>
+                <li>
+                    <a class="btn waves-effect waves-light cyan darken-1" id="scrape" href="/scrape">
+                        scrape recipes
+                    </a>
+                </li>
+                {{!-- here is where I would put a clear all button if I could figure out how to do that --}}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="./assets/images/wood.jpg" />
+                <div class="caption center-align">
+                    <h1 id="caption">recipe scraper</h1>
+                </div>
+            </li>
+            <li>
+                <img src="./assets/images/brick.jpg" />
+                <div class="caption center-align">
+                    <h1 id="caption">recipe scraper</h1>
+                </div>
+            </li>
+            <li>
+                <img src="./assets/images/blue.jpg" />
+                <div class="caption center-align">
+                    <h1 id="caption">recipe scraper</h1>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </ul>
+
+    {{{ body }}}
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+  <div class="collection" id="articles">
+
+    {{#each recipes}}
+    <a href="{{this.link}}" class="collection-item blue lighten-4" data-id="{{this.id}}">{{this.title}}</a>
+    <a class="note-button waves-effect waves-light btn blue darken-3 modal-trigger" href='#modal1'
+      data-id="{{this.id}}">add a note</a>
+    <a class="clear-recipe waves-effect waves-light btn pink lighten-3" href="/clear/{{this.id}}"
+      data-id="{{this.id}}">clear</a>
+    {{/each}}
+
+  </div>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>add a note</h4>
+      <textarea id="note-body">
+      </textarea>
+    </div>
+    <div class="modal-footer">
+      <a href="" id="save-note" class="modal-close waves-effect waves-green btn-flat">save note</a>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="./assets/js/saved.js"></script>
+
+</body>
+
+</html>

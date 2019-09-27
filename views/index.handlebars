@@ -1,0 +1,14 @@
+<div class="collection" id="articles">
+  {{#each recipes}}
+  <a href="{{this.link}}" class="collection-item blue lighten-3" data-id="{{this.id}}">{{this.title}}</a>
+  <a class="save-recipe waves-effect waves-light btn pink lighten-3" href="/save/{{this.id}}"
+    data-id="{{this.id}}">save recipe</a>
+  {{/each}}
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+<script src="./assets/js/app.js"></script>
